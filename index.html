@@ -13,7 +13,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,Bl
 .wrap{max-width:760px;margin:0 auto;padding:0 14px 30px}
 .hero{background:linear-gradient(135deg,#0f2742,#143b5e);color:#fff;margin:0 -14px;padding:28px 22px 24px;border-radius:0 0 28px 28px;box-shadow:0 12px 30px rgba(15,39,66,.22)}
 .hero h1{margin:0;font-size:28px;letter-spacing:.02em}
-.hero p{margin:8px 0 0;color:#d4e2ef;font-size:14px}
+.hero p{margin:8px 0 0;color:#d4e2ef;font-size:14px}.hero .hero-note{color:#ffe1a3;font-weight:700}
 .today{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:18px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);border-radius:18px;padding:14px}
 .today small{display:block;color:#bcd2e5;font-size:12px;margin-bottom:3px}
 .today strong{font-size:17px}
@@ -40,10 +40,10 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,Bl
 .items{display:grid;gap:9px}
 .item{display:grid;grid-template-columns:106px minmax(0,1fr);gap:11px;align-items:center;border-radius:16px;padding:12px 13px;background:var(--teal-bg)}
 .item.study{background:var(--purple-bg)}
-.item.off{background:var(--gray-bg)}
+.item.off{background:var(--gray-bg)}.item.pending{background:#fff8e8;border:1px dashed #e3a13a}
 .time{font-weight:800;color:var(--teal);font-size:14px;white-space:nowrap}
 .study .time{color:var(--purple)}
-.off .time{color:var(--gray)}
+.off .time{color:var(--gray)}.pending .time{color:#b7791f}
 .course{font-size:17px;font-weight:800;overflow-wrap:anywhere}
 .location{font-size:13px;color:var(--muted);margin-top:3px;overflow-wrap:anywhere}
 .footer{background:var(--navy);color:#dbe8f4;border-radius:22px;padding:17px;margin-top:18px;font-size:13px}
@@ -57,14 +57,14 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,Bl
 <div class="wrap">
 <header class="hero">
 <h1>国庆前课程表</h1>
-<p>9月17日–9月30日 · 课程地点＋晚自习</p>
+<p>9月17日–9月30日 · 课程地点＋晚自习</p><p class="hero-note">星期六晚自习待定：19:30–21:05，以班级通知为准</p>
 <div class="today">
 <div><small>今天</small><strong id="todayTitle">正在加载</strong></div>
 <div class="next" id="nextText"></div>
 <button class="locate" type="button" onclick="locateToday()">定位今天</button>
 </div>
 </header>
-<div class="legend"><span>绿色：课程</span><span>紫色：晚自习</span><span>橙色：调休补课</span></div>
+<div class="legend"><span>绿色：课程</span><span>紫色：晚自习</span><span>黄色：晚自习待定</span><span>橙色：调休补课</span></div>
 <nav class="jump" id="jump" aria-label="日期快速跳转"></nav>
 <main id="schedule"></main>
 <section class="footer">
@@ -79,7 +79,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,Bl
 const schedule=[
 {id:'sep17',date:'2026-09-17',label:'9/17',dateLabel:'9月17日',weekday:'星期四',week:'第3周',items:[{start:'08:00',end:'09:40',time:'08:00–09:40',title:'大学英语（一）',location:'宝教一106',type:'class'},{start:'16:25',end:'18:05',time:'16:25–18:05',title:'计算机应用技术',location:'宝实A407 计算机实验室五',type:'class'},{start:'19:30',end:'21:05',time:'19:30–21:05',title:'晚自习',location:'地点待班级通知',type:'study'}]},
 {id:'sep18',date:'2026-09-18',label:'9/18',dateLabel:'9月18日',weekday:'星期五',week:'第3周',items:[{start:'16:25',end:'18:05',time:'16:25–18:05',title:'思想道德与法治',location:'宝教三205',type:'class'},{start:'',end:'',time:'晚上',title:'不安排晚自习',location:'周五',type:'off'}]},
-{id:'sep19',date:'2026-09-19',label:'9/19',dateLabel:'9月19日',weekday:'星期六',week:'周末',items:[{start:'',end:'',time:'全天',title:'休息',location:'不安排课程和晚自习',type:'off'}]},
+{id:'sep19',date:'2026-09-19',label:'9/19',dateLabel:'9月19日',weekday:'星期六',week:'星期六 · 晚自习待定',note:'星期六晚自习可能安排，以班级通知为准',items:[{start:'',end:'',time:'白天',title:'休息',location:'无白天课程',type:'off'},{start:'19:30',end:'21:05',time:'19:30–21:05',title:'晚自习（待定）',location:'地点待班级通知 · 是否上课以班级通知为准',type:'study pending'}]},
 {id:'sep20',date:'2026-09-20',label:'9/20',dateLabel:'9月20日',weekday:'星期日',week:'调休补课',special:true,note:'补10月6日（第6周星期二）课程',items:[{start:'08:00',end:'09:40',time:'08:00–09:40',title:'大学英语（一）',location:'宝教一106',type:'class'},{start:'10:00',end:'11:40',time:'10:00–11:40',title:'电路分析基础',location:'宝教三503',type:'class'},{start:'14:30',end:'16:10',time:'14:30–16:10',title:'思想道德与法治',location:'宝教三204',type:'class'},{start:'19:30',end:'21:05',time:'19:30–21:05',title:'晚自习',location:'地点待班级通知',type:'study'}]},
 {id:'sep21',date:'2026-09-21',label:'9/21',dateLabel:'9月21日',weekday:'星期一',week:'第4周',items:[{start:'10:00',end:'11:40',time:'10:00–11:40',title:'大学体育（一）',location:'宝盖300米篮球场5',type:'class'},{start:'14:30',end:'16:10',time:'14:30–16:10',title:'高等数学A（一）',location:'宝教三501',type:'class'},{start:'16:25',end:'18:05',time:'16:25–18:05',title:'军事理论',location:'宝教二408',type:'class'},{start:'19:30',end:'21:05',time:'19:30–21:05',title:'晚自习',location:'地点待班级通知',type:'study'}]},
 {id:'sep22',date:'2026-09-22',label:'9/22',dateLabel:'9月22日',weekday:'星期二',week:'第4周',items:[{start:'08:00',end:'09:40',time:'08:00–09:40',title:'大学英语（一）',location:'宝教一106',type:'class'},{start:'10:00',end:'11:40',time:'10:00–11:40',title:'电路分析基础',location:'宝教三503',type:'class'},{start:'14:30',end:'16:10',time:'14:30–16:10',title:'大学英语（一）',location:'宝实A515 语音室',type:'class'},{start:'19:30',end:'21:05',time:'19:30–21:05',title:'晚自习',location:'地点待班级通知',type:'study'}]},
