@@ -31,7 +31,7 @@ jobs:
       - name: Write signing keystore
         env:
           ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
-        working-directory: android-app
+        working-directory: android-app/app
         run: echo "$ANDROID_KEYSTORE_BASE64" | base64 --decode > release.keystore
 
       - name: Build release APK
