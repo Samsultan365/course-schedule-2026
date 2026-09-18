@@ -50,6 +50,8 @@ public class MainActivity extends Activity {
         settings.setCacheMode(WebSettings.LOAD_DEFAULT);
         webView.clearCache(true);
 
+        webView.addJavascriptInterface(new AppBridge(this), "CourseScheduleApp");
+
         webView.setWebViewClient(new WebViewClient() {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
@@ -116,8 +118,8 @@ public class MainActivity extends Activity {
 
     private void showUpdateDialog(String latestVersion, String notes, String apkUrl) {
         AlertDialog dialog = new AlertDialog.Builder(this)
-                .setTitle("发现新版本 " + latestVersion)
-                .setMessage(notes == null || notes.trim().isEmpty() ? "课程表有新版本，是否立即更新？" : notes)
+                .setTitle("发现新版本")
+                .setMessage("当前版本：" + BuildConfig.VERSION_NAME + "\n新版本：" + latestVersion + "\n\n更新内容：\n" + (notes == null || notes.trim().isEmpty() ? "新版本已可用，是否立即更新？" : notes))
                 .setPositiveButton("立即更新", (d, w) -> downloadAndInstall(latestVersion, apkUrl))
                 .setNegativeButton("稍后", null)
                 .create();
@@ -239,6 +241,24 @@ public class MainActivity extends Activity {
             return Integer.parseInt(value.replaceAll("\\D+", ""));
         } catch (Exception e) {
             return 0;
+        }
+    }
+
+    private static class AppBridge {
+        private final MainActivity activity;
+
+        AppBridge(MainActivity activity) {
+            this.activity = activity;
+        }
+
+        @android.webkit.JavascriptInterface
+        public boolean getRemindersEnabled() {
+            return ReminderManager.isEnabled(activity);
+        }
+
+        @android.webkit.JavascriptInterface
+        public void setRemindersEnabled(boolean enabled) {
+            activity.runOnUiThread(() -> ReminderManager.setEnabled(activity, enabled));
         }
     }
 
