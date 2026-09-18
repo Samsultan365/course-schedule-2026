@@ -11,7 +11,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 public class MainActivity extends Activity {
-    private static final String HOME_URL = "https://samsultan365.github.io/course-schedule-2026/";
+    private static final String HOME_URL = "https://samsultan365.github.io/course-schedule-2026/?app=android";
     private WebView webView;
 
     @Override
@@ -22,10 +22,10 @@ public class MainActivity extends Activity {
 
         WebSettings settings = webView.getSettings();
         settings.setJavaScriptEnabled(true);
-        settings.setUserAgentString(settings.getUserAgentString() + " CourseScheduleApp/1.0.1");
+        settings.setUserAgentString(settings.getUserAgentString() + " CourseScheduleApp/1.0.2");
         settings.setDomStorageEnabled(true);
         settings.setDatabaseEnabled(true);
-        settings.setCacheMode(WebSettings.LOAD_DEFAULT);
+        settings.setCacheMode(WebSettings.LOAD_DEFAULT);\n        webView.clearCache(true);
 
         webView.setWebViewClient(new WebViewClient() {
             @Override
