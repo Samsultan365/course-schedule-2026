@@ -77,6 +77,8 @@ public class MainActivity extends Activity {
         }
 
         checkForUpdate();
+        ReminderManager.ensurePermissions(this);
+        ReminderManager.sync(this);
     }
 
     private void checkForUpdate() {
