@@ -31,6 +31,7 @@ public class ReminderManager {
     private static final String SCHEDULE_URL = "https://samsultan365.github.io/course-schedule-2026/schedule.json";
     private static final String PREFS = "course_reminders";
     private static final String KEY_IDS = "scheduled_ids";
+    private static final String KEY_ENABLED = "reminders_enabled";
     private static final long DAY_MILLIS = 24L * 60L * 60L * 1000L;
     public static final String ACTION_SHOW = "com.samsultan365.courseschedule.action.SHOW_REMINDER";
     public static final String ACTION_SNOOZE = "com.samsultan365.courseschedule.action.SNOOZE_REMINDER";
@@ -41,8 +42,34 @@ public class ReminderManager {
     public static final String EXTRA_STATUS = "status";
     public static final String EXTRA_DATE = "date";
 
+    public static boolean isEnabled(Context context) {
+        return context.getSharedPreferences(PREFS, Context.MODE_PRIVATE).getBoolean(KEY_ENABLED, true);
+    }
+
+    public static void setEnabled(Context context, boolean enabled) {
+        context.getSharedPreferences(PREFS, Context.MODE_PRIVATE).edit().putBoolean(KEY_ENABLED, enabled).apply();
+        if (enabled) {
+            sync(context);
+        } else {
+            cancelAll(context);
+        }
+    }
+
+    private static void cancelAll(Context context) {
+        AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+        SharedPreferences prefs = context.getSharedPreferences(PREFS, Context.MODE_PRIVATE);
+        Set<String> oldIds = new HashSet<>(prefs.getStringSet(KEY_IDS, new HashSet<>()));
+        for (String oldId : oldIds) {
+            cancel(context, alarmManager, Integer.parseInt(oldId));
+        }
+        prefs.edit().putStringSet(KEY_IDS, new HashSet<>()).apply();
+    }
+
     public static void sync(Context context) {
-        new Thread(() -> {
+        if (!isEnabled(context)) {
+            cancelAll(context);
+            return;
+        }        new Thread(() -> {
             try {
                 String json = httpGet(SCHEDULE_URL);
                 JSONObject root = new JSONObject(json);
