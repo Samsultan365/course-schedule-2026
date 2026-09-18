@@ -35,6 +35,10 @@ jobs:
         run: echo "$ANDROID_KEYSTORE_BASE64" | base64 --decode > release.keystore
 
       - name: Build release APK
+        env:
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
         working-directory: android-app
         run: gradle assembleRelease --no-daemon
 
