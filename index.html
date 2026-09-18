@@ -59,7 +59,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,Bl
 .footer strong{display:block;color:#fff;font-size:16px;margin-bottom:9px}
 .footer p{margin:5px 0}
 .footer .tip{color:#a9c2d8;margin-top:10px}
-.install-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:14px 0 2px;padding:13px 14px;border:1px solid #d7e3ec;border-radius:18px;background:#fff;box-shadow:var(--shadow)}.install-bar.show{display:flex}.install-copy strong{display:block;font-size:15px}.install-copy span{display:block;color:var(--muted);font-size:12px;margin-top:2px}.install-dialog{border:0;border-radius:22px;padding:0;max-width:calc(100% - 32px);box-shadow:0 24px 70px rgba(15,39,66,.32)}.install-dialog::backdrop{background:rgba(15,39,66,.48)}.install-dialog-inner{padding:22px}.install-dialog h3{margin:0 0 10px;font-size:21px}.install-dialog p{margin:0 0 12px;color:var(--muted);font-size:14px}.install-dialog ol{margin:0;padding-left:22px}.install-dialog li{margin:8px 0}.install-dialog button{margin-top:18px;width:100%;border:0;border-radius:14px;background:var(--navy);color:#fff;font-weight:800;padding:12px}.install-button{border:0;border-radius:999px;background:var(--teal);color:#fff;font-weight:800;padding:10px 16px;white-space:nowrap}.app-meta{display:flex;gap:7px;flex-wrap:wrap;align-items:center;color:#a9c2d8}.app-meta .dot{width:8px;height:8px;border-radius:50%;background:#4ade80;display:inline-block}.app-meta.offline .dot{background:#fbbf24}@media (max-width:420px){.hero h1{font-size:25px}.today{align-items:flex-start}.today .next{max-width:48%}.item{grid-template-columns:96px minmax(0,1fr);padding:11px}.course{font-size:16px}.date{font-size:21px}}
+.install-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:14px 0 2px;padding:13px 14px;border:1px solid #d7e3ec;border-radius:18px;background:#fff;box-shadow:var(--shadow)}.install-bar.show{display:flex}.install-bar[hidden]{display:none!important}.install-copy strong{display:block;font-size:15px}.install-copy span{display:block;color:var(--muted);font-size:12px;margin-top:2px}.install-dialog{border:0;border-radius:22px;padding:0;max-width:calc(100% - 32px);box-shadow:0 24px 70px rgba(15,39,66,.32)}.install-dialog::backdrop{background:rgba(15,39,66,.48)}.install-dialog-inner{padding:22px}.install-dialog h3{margin:0 0 10px;font-size:21px}.install-dialog p{margin:0 0 12px;color:var(--muted);font-size:14px}.install-dialog ol{margin:0;padding-left:22px}.install-dialog li{margin:8px 0}.install-dialog button{margin-top:18px;width:100%;border:0;border-radius:14px;background:var(--navy);color:#fff;font-weight:800;padding:12px}.install-button{border:0;border-radius:999px;background:var(--teal);color:#fff;font-weight:800;padding:10px 16px;white-space:nowrap}.app-meta{display:flex;gap:7px;flex-wrap:wrap;align-items:center;color:#a9c2d8}.app-meta .dot{width:8px;height:8px;border-radius:50%;background:#4ade80;display:inline-block}.app-meta.offline .dot{background:#fbbf24}@media (max-width:420px){.hero h1{font-size:25px}.today{align-items:flex-start}.today .next{max-width:48%}.item{grid-template-columns:96px minmax(0,1fr);padding:11px}.course{font-size:16px}.date{font-size:21px}}
 </style>
 </head>
 <body>
@@ -82,7 +82,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,Bl
 <p>第1–2节 08:00–09:40　第3–4节 10:00–11:40</p>
 <p>第5–6节 14:30–16:10　第7–8节 16:25–18:05</p>
 <p>晚自习 19:30–21:05</p>
-<p class="tip">课程提前30分钟提醒 · 晚自习提前15分钟提醒</p><p class="app-meta" id="appMeta"><span class="dot"></span><span id="networkStatus">在线</span><span>·</span><span>版本 1.0.3</span><span>·</span><span>更新于 2026-09-18</span></p>
+<p class="tip">课程提前30分钟提醒 · 晚自习提前15分钟提醒</p><p class="app-meta" id="appMeta"><span class="dot"></span><span id="networkStatus">在线</span><span>·</span><span>版本 1.0.4</span><span>·</span><span>更新于 2026-09-18</span></p>
 </section>
 </div>
 <script>
@@ -122,7 +122,7 @@ function render(){
 }
 function locateToday(){const todayKey=dateKey(new Date());const day=schedule.find(d=>isToday(d,todayKey));document.getElementById(day?day.id:'sep17').scrollIntoView({behavior:'smooth',block:'start'})}
 render();
-const APP_VERSION='1.0.3';
+const APP_VERSION='1.0.4';
 let installPrompt=null;
 const installBar=document.getElementById('installBar');
 const installButton=document.getElementById('installButton');
@@ -141,7 +141,7 @@ const installDialogNote=document.getElementById('installDialogNote');
 const isIOS=/iPad|iPhone|iPod/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
 const isStandalone=window.matchMedia('(display-mode: standalone)').matches||navigator.standalone;
 const isInstalledApp=isStandalone||navigator.userAgent.includes('CourseScheduleApp');
-if(isInstalledApp){installBar.hidden=true}
+if(isInstalledApp){installBar.hidden=true;installBar.style.display="none"}
 if(isIOS){installDialogTitle.textContent='安装到 iPhone 或 iPad';installDialogLead.textContent='请使用 Safari 打开当前网址，然后按以下步骤操作：';installSteps.innerHTML='<li>点击 Safari 底部的“分享”按钮。</li><li>向上滑动，选择“添加到主屏幕”。</li><li>确认名称“课程表”，再点击“添加”。</li>';installDialogNote.textContent='如果看不到“添加到主屏幕”，请确认使用的是 Safari，而不是微信、QQ 或其他应用内置浏览器。'}else{installDialogTitle.textContent='安装到安卓手机';installDialogLead.textContent='请使用 Chrome、Edge、三星浏览器或其他支持安装的浏览器打开当前网址：';installSteps.innerHTML='<li>点击浏览器右上角菜单。</li><li>选择“安装应用”或“添加到主屏幕”。</li><li>确认名称“课程表”并完成安装。</li>';installDialogNote.textContent='如果菜单中没有安装选项，请更新浏览器，并确认没有使用微信、QQ 或其他应用内置浏览器。'}
 window.addEventListener('beforeinstallprompt',event=>{event.preventDefault();installPrompt=event;installButton.textContent='立即安装'});
 installButton?.addEventListener('click',async()=>{if(!installPrompt){installDialog.showModal();return}installPrompt.prompt();await installPrompt.userChoice;installPrompt=null;installBar.hidden=true});
