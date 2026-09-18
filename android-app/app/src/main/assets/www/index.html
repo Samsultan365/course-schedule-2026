@@ -73,7 +73,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,Bl
 <button class="locate" type="button" onclick="locateToday()">定位今天</button>
 </div>
 </header>
-<section class="install-bar" id="installBar"><div class="install-copy"><strong>安装“课程表”到手机</strong><span>添加桌面图标，支持离线打开</span></div><button class="install-button" type="button" id="installButton">安装</button></section><dialog class="install-dialog" id="installDialog"><div class="install-dialog-inner"><h3>安装到安卓手机</h3><p>请使用 Chrome 打开当前网址，然后按以下步骤操作：</p><ol><li>点击 Chrome 右上角的“⋮”菜单。</li><li>选择“安装应用”或“添加到主屏幕”。</li><li>确认名称“课程表”，再点击“安装”。</li></ol><p>如果菜单中没有安装选项，请先更新 Chrome，并确认没有使用微信、QQ 或其他应用内置浏览器。</p><button type="button" id="closeInstallDialog">知道了</button></div></dialog>
+<section class="install-bar" id="installBar"><div class="install-copy"><strong>安装“课程表”到手机</strong><span>添加桌面图标，支持离线打开</span></div><button class="install-button" type="button" id="installButton">安装</button></section><dialog class="install-dialog" id="installDialog"><div class="install-dialog-inner"><h3 id="installDialogTitle">安装到手机</h3><p id="installDialogLead">请使用手机自带浏览器打开当前网址，然后按以下步骤操作：</p><ol id="installSteps"><li>点击浏览器菜单。</li><li>选择“安装应用”或“添加到主屏幕”。</li><li>确认名称“课程表”并完成安装。</li></ol><p id="installDialogNote">如果菜单中没有安装选项，请更新浏览器，并确认没有使用应用内置浏览器。</p><button type="button" id="closeInstallDialog">知道了</button></div></dialog>
 <div class="legend"><span>绿色：课程</span><span>紫色：晚自习</span><span>黄色：晚自习待定</span><span>橙色：调休补课</span></div>
 <nav class="jump" id="jump" aria-label="日期快速跳转"></nav>
 <main id="schedule"></main>
@@ -82,7 +82,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,Bl
 <p>第1–2节 08:00–09:40　第3–4节 10:00–11:40</p>
 <p>第5–6节 14:30–16:10　第7–8节 16:25–18:05</p>
 <p>晚自习 19:30–21:05</p>
-<p class="tip">课程提前30分钟提醒 · 晚自习提前15分钟提醒</p><p class="app-meta" id="appMeta"><span class="dot"></span><span id="networkStatus">在线</span><span>·</span><span>版本 1.0.1</span><span>·</span><span>更新于 2026-09-18</span></p>
+<p class="tip">课程提前30分钟提醒 · 晚自习提前15分钟提醒</p><p class="app-meta" id="appMeta"><span class="dot"></span><span id="networkStatus">在线</span><span>·</span><span>版本 1.0.3</span><span>·</span><span>更新于 2026-09-18</span></p>
 </section>
 </div>
 <script>
@@ -122,7 +122,7 @@ function render(){
 }
 function locateToday(){const todayKey=dateKey(new Date());const day=schedule.find(d=>isToday(d,todayKey));document.getElementById(day?day.id:'sep17').scrollIntoView({behavior:'smooth',block:'start'})}
 render();
-const APP_VERSION='1.0.1';
+const APP_VERSION='1.0.3';
 let installPrompt=null;
 const installBar=document.getElementById('installBar');
 const installButton=document.getElementById('installButton');
@@ -134,7 +134,15 @@ window.addEventListener('offline',updateNetworkStatus);
 updateNetworkStatus();
 const installDialog=document.getElementById('installDialog');
 const closeInstallDialog=document.getElementById('closeInstallDialog');
-if(window.matchMedia('(display-mode: standalone)').matches||navigator.standalone){installBar.hidden=true}
+const installDialogTitle=document.getElementById('installDialogTitle');
+const installDialogLead=document.getElementById('installDialogLead');
+const installSteps=document.getElementById('installSteps');
+const installDialogNote=document.getElementById('installDialogNote');
+const isIOS=/iPad|iPhone|iPod/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+const isStandalone=window.matchMedia('(display-mode: standalone)').matches||navigator.standalone;
+const isInstalledApp=isStandalone||navigator.userAgent.includes('CourseScheduleApp');
+if(isInstalledApp){installBar.hidden=true}
+if(isIOS){installDialogTitle.textContent='安装到 iPhone 或 iPad';installDialogLead.textContent='请使用 Safari 打开当前网址，然后按以下步骤操作：';installSteps.innerHTML='<li>点击 Safari 底部的“分享”按钮。</li><li>向上滑动，选择“添加到主屏幕”。</li><li>确认名称“课程表”，再点击“添加”。</li>';installDialogNote.textContent='如果看不到“添加到主屏幕”，请确认使用的是 Safari，而不是微信、QQ 或其他应用内置浏览器。'}else{installDialogTitle.textContent='安装到安卓手机';installDialogLead.textContent='请使用 Chrome、Edge、三星浏览器或其他支持安装的浏览器打开当前网址：';installSteps.innerHTML='<li>点击浏览器右上角菜单。</li><li>选择“安装应用”或“添加到主屏幕”。</li><li>确认名称“课程表”并完成安装。</li>';installDialogNote.textContent='如果菜单中没有安装选项，请更新浏览器，并确认没有使用微信、QQ 或其他应用内置浏览器。'}
 window.addEventListener('beforeinstallprompt',event=>{event.preventDefault();installPrompt=event;installButton.textContent='立即安装'});
 installButton?.addEventListener('click',async()=>{if(!installPrompt){installDialog.showModal();return}installPrompt.prompt();await installPrompt.userChoice;installPrompt=null;installBar.hidden=true});
 closeInstallDialog?.addEventListener('click',()=>installDialog.close());
