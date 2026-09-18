@@ -25,7 +25,8 @@ public class MainActivity extends Activity {
         settings.setUserAgentString(settings.getUserAgentString() + " CourseScheduleApp/1.0.2");
         settings.setDomStorageEnabled(true);
         settings.setDatabaseEnabled(true);
-        settings.setCacheMode(WebSettings.LOAD_DEFAULT);\n        webView.clearCache(true);
+        settings.setCacheMode(WebSettings.LOAD_DEFAULT);
+        webView.clearCache(true);
 
         webView.setWebViewClient(new WebViewClient() {
             @Override
