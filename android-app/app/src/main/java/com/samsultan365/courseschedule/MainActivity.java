@@ -260,6 +260,30 @@ public class MainActivity extends Activity {
         public void setRemindersEnabled(boolean enabled) {
             activity.runOnUiThread(() -> ReminderManager.setEnabled(activity, enabled));
         }
+
+        @android.webkit.JavascriptInterface
+        public String getReminderStatus() {
+            return ReminderManager.getStatusJson(activity);
+        }
+
+        @android.webkit.JavascriptInterface
+        public void testReminder() {
+            activity.runOnUiThread(() -> ReminderManager.testReminder(activity));
+        }
+
+        @android.webkit.JavascriptInterface
+        public void openReminderSettings() {
+            activity.runOnUiThread(activity::openReminderSettings);
+        }
+    }
+
+    public void openReminderSettings() {
+        try {
+            Intent intent = new Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS);
+            intent.putExtra(Settings.EXTRA_APP_PACKAGE, getPackageName());
+            startActivity(intent);
+        } catch (Exception ignored) {
+        }
     }
 
     @Override
