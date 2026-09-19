@@ -13,6 +13,8 @@ import android.provider.Settings;
 import android.Manifest;
 import android.app.AlertDialog;
 
+import androidx.core.app.NotificationManagerCompat;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -32,6 +34,7 @@ public class ReminderManager {
     private static final String PREFS = "course_reminders";
     private static final String KEY_IDS = "scheduled_ids";
     private static final String KEY_ENABLED = "reminders_enabled";
+    private static final String KEY_LAST_SYNC = "last_sync";
     private static final long DAY_MILLIS = 24L * 60L * 60L * 1000L;
     public static final String ACTION_SHOW = "com.samsultan365.courseschedule.action.SHOW_REMINDER";
     public static final String ACTION_SNOOZE = "com.samsultan365.courseschedule.action.SNOOZE_REMINDER";
@@ -42,6 +45,29 @@ public class ReminderManager {
     public static final String EXTRA_STATUS = "status";
     public static final String EXTRA_DATE = "date";
 
+    public static String getStatusJson(Context context) {
+        try {
+            JSONObject status = new JSONObject();
+            status.put("appVersion", BuildConfig.VERSION_NAME);
+            status.put("remindersEnabled", isEnabled(context));
+            status.put("notificationsAllowed", NotificationManagerCompat.from(context).areNotificationsEnabled());
+            AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+            status.put("exactAlarmAllowed", canScheduleExact(alarmManager));
+            SharedPreferences prefs = context.getSharedPreferences(PREFS, Context.MODE_PRIVATE);
+            status.put("scheduledCount", prefs.getStringSet(KEY_IDS, new HashSet<>()).size());
+            status.put("lastSync", prefs.getLong(KEY_LAST_SYNC, 0L));
+            return status.toString();
+        } catch (Exception e) {
+            return "{}";
+        }
+    }
+
+    public static void testReminder(Context context) {
+        AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+        long trigger = System.currentTimeMillis() + 5000L;
+        schedule(context, alarmManager, trigger, 999999, "测试", "5秒后", "测试提醒",
+                "如果你看到这条通知，提醒功能正常", "confirmed");
+    }
     public static boolean isEnabled(Context context) {
         return context.getSharedPreferences(PREFS, Context.MODE_PRIVATE).getBoolean(KEY_ENABLED, true);
     }
@@ -95,7 +121,14 @@ public class ReminderManager {
                     Date startDate = format.parse(date + " " + start);
                     long startMillis = startDate.getTime();
                     long triggerMillis = startMillis - reminderMinutes * 60L * 1000L;
-                    if (triggerMillis <= now || triggerMillis > horizon) {
+                    if (triggerMillis <= now) {
+                        if (startMillis > now) {
+                            triggerMillis = now + 3000L;
+                        } else {
+                            continue;
+                        }
+                    }
+                    if (triggerMillis > horizon) {
                         continue;
                     }
                     int id = stableId(date, start, title);
@@ -108,7 +141,7 @@ public class ReminderManager {
                         cancel(context, alarmManager, Integer.parseInt(oldId));
                     }
                 }
-                prefs.edit().putStringSet(KEY_IDS, newIds).apply();
+                prefs.edit().putStringSet(KEY_IDS, newIds).putLong(KEY_LAST_SYNC, System.currentTimeMillis()).apply();
             } catch (Exception ignored) {
             }
         }).start();
