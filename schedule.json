@@ -1,7 +1,7 @@
 {
     "version":  3,
     "timezone":  "Asia/Shanghai",
-    "updated_at":  "2026-10-07T15:00:00+08:00",
+    "updated_at":  "2026-10-08T12:00:00+08:00",
     "events":  [
                    {
                        "date":  "2026-10-08",
@@ -13,6 +13,17 @@
                        "reminder_minutes":  30,
                        "status":  "confirmed",
                        "note":  ""
+                   },
+                   {
+                       "date":  "2026-10-08",
+                       "start":  "14:00",
+                       "end":  "15:40",
+                       "title":  "专业导论与学涯规划指导",
+                       "location":  "宝教三503",
+                       "kind":  "class",
+                       "reminder_minutes":  30,
+                       "status":  "confirmed",
+                       "note":  "第6周"
                    },
                    {
                        "date":  "2026-10-08",
@@ -189,6 +200,17 @@
                        "reminder_minutes":  15,
                        "status":  "confirmed",
                        "note":  ""
+                   },
+                   {
+                       "date":  "2026-10-15",
+                       "start":  "14:00",
+                       "end":  "15:40",
+                       "title":  "专业导论与学涯规划指导",
+                       "location":  "宝教三503",
+                       "kind":  "class",
+                       "reminder_minutes":  30,
+                       "status":  "confirmed",
+                       "note":  "第7周"
                    },
                    {
                        "date":  "2026-10-15",
@@ -365,6 +387,17 @@
                        "reminder_minutes":  15,
                        "status":  "confirmed",
                        "note":  ""
+                   },
+                   {
+                       "date":  "2026-10-22",
+                       "start":  "14:00",
+                       "end":  "15:40",
+                       "title":  "专业导论与学涯规划指导",
+                       "location":  "宝教三503",
+                       "kind":  "class",
+                       "reminder_minutes":  30,
+                       "status":  "confirmed",
+                       "note":  "第8周"
                    },
                    {
                        "date":  "2026-10-22",
