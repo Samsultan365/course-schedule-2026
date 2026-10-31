@@ -1,43 +1,43 @@
 {
     "version":  3,
     "timezone":  "Asia/Shanghai",
-    "updated_at":  "2026-10-12T12:00:00+08:00",
+    "updated_at":  "2026-10-31T12:00:00+08:00",
     "events":  [
                    {
-                       "date":  "2026-10-08",
-                       "start":  "08:00",
-                       "end":  "09:40",
-                       "title":  "大学英语（一）",
-                       "location":  "宝教一106",
+                       "date":  "2026-11-02",
+                       "start":  "10:00",
+                       "end":  "11:40",
+                       "title":  "大学体育（一）",
+                       "location":  "宝盖300米篮球场5",
                        "kind":  "class",
                        "reminder_minutes":  30,
                        "status":  "confirmed",
                        "note":  ""
                    },
                    {
-                       "date":  "2026-10-08",
+                       "date":  "2026-11-02",
                        "start":  "14:00",
                        "end":  "15:40",
-                       "title":  "专业导论与学涯规划指导",
-                       "location":  "宝教三503",
-                       "kind":  "class",
-                       "reminder_minutes":  30,
-                       "status":  "confirmed",
-                       "note":  "第6周"
-                   },
-                   {
-                       "date":  "2026-10-08",
-                       "start":  "15:55",
-                       "end":  "17:35",
-                       "title":  "计算机应用技术",
-                       "location":  "宝实A407 计算机实验室五",
+                       "title":  "高等数学A（一）",
+                       "location":  "宝教三501",
                        "kind":  "class",
                        "reminder_minutes":  30,
                        "status":  "confirmed",
                        "note":  ""
                    },
                    {
-                       "date":  "2026-10-08",
+                       "date":  "2026-11-02",
+                       "start":  "15:55",
+                       "end":  "17:35",
+                       "title":  "军事理论",
+                       "location":  "宝教二408",
+                       "kind":  "class",
+                       "reminder_minutes":  30,
+                       "status":  "confirmed",
+                       "note":  ""
+                   },
+                   {
+                       "date":  "2026-11-02",
                        "start":  "19:30",
                        "end":  "21:05",
                        "title":  "晚自习",
@@ -48,7 +48,128 @@
                        "note":  ""
                    },
                    {
-                       "date":  "2026-10-09",
+                       "date":  "2026-11-03",
+                       "start":  "08:00",
+                       "end":  "09:40",
+                       "title":  "大学英语（一）",
+                       "location":  "宝教一106",
+                       "kind":  "class",
+                       "reminder_minutes":  30,
+                       "status":  "confirmed",
+                       "note":  ""
+                   },
+                   {
+                       "date":  "2026-11-03",
+                       "start":  "10:00",
+                       "end":  "11:40",
+                       "title":  "电路分析基础",
+                       "location":  "宝教三503",
+                       "kind":  "class",
+                       "reminder_minutes":  30,
+                       "status":  "confirmed",
+                       "note":  ""
+                   },
+                   {
+                       "date":  "2026-11-03",
+                       "start":  "14:00",
+                       "end":  "15:40",
+                       "title":  "大学英语（一）",
+                       "location":  "宝实A515 语音室",
+                       "kind":  "class",
+                       "reminder_minutes":  30,
+                       "status":  "confirmed",
+                       "note":  ""
+                   },
+                   {
+                       "date":  "2026-11-03",
+                       "start":  "19:30",
+                       "end":  "21:05",
+                       "title":  "晚自习",
+                       "location":  "地点待班级通知",
+                       "kind":  "study",
+                       "reminder_minutes":  15,
+                       "status":  "confirmed",
+                       "note":  ""
+                   },
+                   {
+                       "date":  "2026-11-04",
+                       "start":  "08:00",
+                       "end":  "09:40",
+                       "title":  "高等数学A（一）",
+                       "location":  "宝教三501",
+                       "kind":  "class",
+                       "reminder_minutes":  30,
+                       "status":  "confirmed",
+                       "note":  ""
+                   },
+                   {
+                       "date":  "2026-11-04",
+                       "start":  "10:00",
+                       "end":  "11:40",
+                       "title":  "人工智能通识与应用",
+                       "location":  "宝教一406",
+                       "kind":  "class",
+                       "reminder_minutes":  30,
+                       "status":  "confirmed",
+                       "note":  ""
+                   },
+                   {
+                       "date":  "2026-11-04",
+                       "start":  "19:30",
+                       "end":  "21:05",
+                       "title":  "晚自习",
+                       "location":  "地点待班级通知",
+                       "kind":  "study",
+                       "reminder_minutes":  15,
+                       "status":  "confirmed",
+                       "note":  ""
+                   },
+                   {
+                       "date":  "2026-11-05",
+                       "start":  "08:00",
+                       "end":  "09:40",
+                       "title":  "大学英语（一）",
+                       "location":  "宝教一106",
+                       "kind":  "class",
+                       "reminder_minutes":  30,
+                       "status":  "confirmed",
+                       "note":  ""
+                   },
+                   {
+                       "date":  "2026-11-05",
+                       "start":  "14:00",
+                       "end":  "15:40",
+                       "title":  "专业导论与学涯规划指导",
+                       "location":  "宝教三503",
+                       "kind":  "class",
+                       "reminder_minutes":  30,
+                       "status":  "confirmed",
+                       "note":  ""
+                   },
+                   {
+                       "date":  "2026-11-05",
+                       "start":  "15:55",
+                       "end":  "17:35",
+                       "title":  "计算机应用技术",
+                       "location":  "宝实A407 计算机实验室五",
+                       "kind":  "class",
+                       "reminder_minutes":  30,
+                       "status":  "confirmed",
+                       "note":  ""
+                   },
+                   {
+                       "date":  "2026-11-05",
+                       "start":  "19:30",
+                       "end":  "21:05",
+                       "title":  "晚自习",
+                       "location":  "地点待班级通知",
+                       "kind":  "study",
+                       "reminder_minutes":  15,
+                       "status":  "confirmed",
+                       "note":  ""
+                   },
+                   {
+                       "date":  "2026-11-06",
                        "start":  "10:00",
                        "end":  "11:40",
                        "title":  "高等数学A（一）",
@@ -59,7 +180,7 @@
                        "note":  ""
                    },
                    {
-                       "date":  "2026-10-09",
+                       "date":  "2026-11-06",
                        "start":  "15:55",
                        "end":  "17:35",
                        "title":  "思想道德与法治",
@@ -70,29 +191,7 @@
                        "note":  ""
                    },
                    {
-                       "date":  "2026-10-10",
-                       "start":  "08:00",
-                       "end":  "09:40",
-                       "title":  "高等数学A（一）",
-                       "location":  "宝教三501",
-                       "kind":  "class",
-                       "reminder_minutes":  30,
-                       "status":  "confirmed",
-                       "note":  "调休补10月7日（星期三）课程"
-                   },
-                   {
-                       "date":  "2026-10-10",
-                       "start":  "10:00",
-                       "end":  "11:40",
-                       "title":  "人工智能通识与应用",
-                       "location":  "宝教一406",
-                       "kind":  "class",
-                       "reminder_minutes":  30,
-                       "status":  "confirmed",
-                       "note":  "调休补10月7日（星期三）课程"
-                   },
-                   {
-                       "date":  "2026-10-12",
+                       "date":  "2026-11-09",
                        "start":  "10:00",
                        "end":  "11:40",
                        "title":  "大学体育（一）",
@@ -103,7 +202,7 @@
                        "note":  ""
                    },
                    {
-                       "date":  "2026-10-12",
+                       "date":  "2026-11-09",
                        "start":  "14:00",
                        "end":  "15:40",
                        "title":  "高等数学A（一）",
@@ -114,7 +213,7 @@
                        "note":  ""
                    },
                    {
-                       "date":  "2026-10-12",
+                       "date":  "2026-11-09",
                        "start":  "15:55",
                        "end":  "17:35",
                        "title":  "军事理论",
@@ -125,7 +224,7 @@
                        "note":  ""
                    },
                    {
-                       "date":  "2026-10-12",
+                       "date":  "2026-11-09",
                        "start":  "19:30",
                        "end":  "21:05",
                        "title":  "晚自习",
@@ -136,7 +235,7 @@
                        "note":  ""
                    },
                    {
-                       "date":  "2026-10-13",
+                       "date":  "2026-11-10",
                        "start":  "08:00",
                        "end":  "09:40",
                        "title":  "大学英语（一）",
@@ -147,7 +246,7 @@
                        "note":  ""
                    },
                    {
-                       "date":  "2026-10-13",
+                       "date":  "2026-11-10",
                        "start":  "10:00",
                        "end":  "11:40",
                        "title":  "电路分析基础",
@@ -158,18 +257,7 @@
                        "note":  ""
                    },
                    {
-                       "date":  "2026-10-13",
-                       "start":  "14:00",
-                       "end":  "15:40",
-                       "title":  "思想道德与法治",
-                       "location":  "宝教三204",
-                       "kind":  "class",
-                       "reminder_minutes":  30,
-                       "status":  "confirmed",
-                       "note":  ""
-                   },
-                   {
-                       "date":  "2026-10-13",
+                       "date":  "2026-11-10",
                        "start":  "19:30",
                        "end":  "21:05",
                        "title":  "晚自习",
@@ -180,7 +268,7 @@
                        "note":  ""
                    },
                    {
-                       "date":  "2026-10-14",
+                       "date":  "2026-11-11",
                        "start":  "08:00",
                        "end":  "09:40",
                        "title":  "高等数学A（一）",
@@ -191,7 +279,7 @@
                        "note":  ""
                    },
                    {
-                       "date":  "2026-10-14",
+                       "date":  "2026-11-11",
                        "start":  "10:00",
                        "end":  "11:40",
                        "title":  "人工智能通识与应用",
@@ -202,7 +290,7 @@
                        "note":  ""
                    },
                    {
-                       "date":  "2026-10-14",
+                       "date":  "2026-11-11",
                        "start":  "19:30",
                        "end":  "21:05",
                        "title":  "晚自习",
@@ -213,7 +301,62 @@
                        "note":  ""
                    },
                    {
-                       "date":  "2026-10-15",
+                       "date":  "2026-11-12",
+                       "start":  "19:30",
+                       "end":  "21:05",
+                       "title":  "晚自习",
+                       "location":  "地点待班级通知",
+                       "kind":  "study",
+                       "reminder_minutes":  15,
+                       "status":  "confirmed",
+                       "note":  ""
+                   },
+                   {
+                       "date":  "2026-11-16",
+                       "start":  "10:00",
+                       "end":  "11:40",
+                       "title":  "大学体育（一）",
+                       "location":  "宝盖300米篮球场5",
+                       "kind":  "class",
+                       "reminder_minutes":  30,
+                       "status":  "confirmed",
+                       "note":  ""
+                   },
+                   {
+                       "date":  "2026-11-16",
+                       "start":  "14:00",
+                       "end":  "15:40",
+                       "title":  "高等数学A（一）",
+                       "location":  "宝教三501",
+                       "kind":  "class",
+                       "reminder_minutes":  30,
+                       "status":  "confirmed",
+                       "note":  ""
+                   },
+                   {
+                       "date":  "2026-11-16",
+                       "start":  "15:55",
+                       "end":  "17:35",
+                       "title":  "军事理论",
+                       "location":  "宝教二408",
+                       "kind":  "class",
+                       "reminder_minutes":  30,
+                       "status":  "confirmed",
+                       "note":  ""
+                   },
+                   {
+                       "date":  "2026-11-16",
+                       "start":  "19:30",
+                       "end":  "21:05",
+                       "title":  "晚自习",
+                       "location":  "地点待班级通知",
+                       "kind":  "study",
+                       "reminder_minutes":  15,
+                       "status":  "confirmed",
+                       "note":  ""
+                   },
+                   {
+                       "date":  "2026-11-17",
                        "start":  "08:00",
                        "end":  "09:40",
                        "title":  "大学英语（一）",
@@ -224,29 +367,29 @@
                        "note":  ""
                    },
                    {
-                       "date":  "2026-10-15",
-                       "start":  "14:00",
-                       "end":  "15:40",
-                       "title":  "专业导论与学涯规划指导",
+                       "date":  "2026-11-17",
+                       "start":  "10:00",
+                       "end":  "11:40",
+                       "title":  "电路分析基础",
                        "location":  "宝教三503",
-                       "kind":  "class",
-                       "reminder_minutes":  30,
-                       "status":  "confirmed",
-                       "note":  "第7周"
-                   },
-                   {
-                       "date":  "2026-10-15",
-                       "start":  "15:55",
-                       "end":  "17:35",
-                       "title":  "计算机应用技术",
-                       "location":  "宝实A407 计算机实验室五",
                        "kind":  "class",
                        "reminder_minutes":  30,
                        "status":  "confirmed",
                        "note":  ""
                    },
                    {
-                       "date":  "2026-10-15",
+                       "date":  "2026-11-17",
+                       "start":  "14:00",
+                       "end":  "15:40",
+                       "title":  "思想道德与法治",
+                       "location":  "宝教三607",
+                       "kind":  "class",
+                       "reminder_minutes":  30,
+                       "status":  "confirmed",
+                       "note":  ""
+                   },
+                   {
+                       "date":  "2026-11-17",
                        "start":  "19:30",
                        "end":  "21:05",
                        "title":  "晚自习",
@@ -257,18 +400,95 @@
                        "note":  ""
                    },
                    {
-                       "date":  "2026-10-16",
+                       "date":  "2026-11-18",
                        "start":  "08:00",
                        "end":  "09:40",
-                       "title":  "大学英语（一）",
-                       "location":  "宝实A504 语音室10",
+                       "title":  "高等数学A（一）",
+                       "location":  "宝教三501",
                        "kind":  "class",
                        "reminder_minutes":  30,
                        "status":  "confirmed",
-                       "note":  "第7周单周"
+                       "note":  ""
                    },
                    {
-                       "date":  "2026-10-16",
+                       "date":  "2026-11-18",
+                       "start":  "10:00",
+                       "end":  "11:40",
+                       "title":  "人工智能通识与应用",
+                       "location":  "宝教一406",
+                       "kind":  "class",
+                       "reminder_minutes":  30,
+                       "status":  "confirmed",
+                       "note":  ""
+                   },
+                   {
+                       "date":  "2026-11-18",
+                       "start":  "19:30",
+                       "end":  "21:05",
+                       "title":  "晚自习",
+                       "location":  "地点待班级通知",
+                       "kind":  "study",
+                       "reminder_minutes":  15,
+                       "status":  "confirmed",
+                       "note":  ""
+                   },
+                   {
+                       "date":  "2026-11-19",
+                       "start":  "08:00",
+                       "end":  "09:40",
+                       "title":  "大学英语（一）",
+                       "location":  "宝教一106",
+                       "kind":  "class",
+                       "reminder_minutes":  30,
+                       "status":  "confirmed",
+                       "note":  ""
+                   },
+                   {
+                       "date":  "2026-11-19",
+                       "start":  "10:00",
+                       "end":  "11:40",
+                       "title":  "形势与政策B",
+                       "location":  "宝教三202",
+                       "kind":  "class",
+                       "reminder_minutes":  30,
+                       "status":  "confirmed",
+                       "note":  ""
+                   },
+                   {
+                       "date":  "2026-11-19",
+                       "start":  "14:00",
+                       "end":  "15:40",
+                       "title":  "专业导论与学涯规划指导",
+                       "location":  "宝教三503",
+                       "kind":  "class",
+                       "reminder_minutes":  30,
+                       "status":  "confirmed",
+                       "note":  ""
+                   },
+                   {
+                       "date":  "2026-11-19",
+                       "start":  "15:55",
+                       "end":  "17:35",
+                       "title":  "计算机应用技术",
+                       "location":  "宝实A407 计算机实验室五",
+                       "kind":  "class",
+                       "reminder_minutes":  30,
+                       "status":  "confirmed",
+                       "note":  ""
+                   },
+                   {
+                       "date":  "2026-11-19",
+                       "start":  "19:30",
+                       "end":  "21:05",
+                       "title":  "晚自习",
+                       "location":  "地点待班级通知",
+                       "kind":  "study",
+                       "reminder_minutes":  15,
+                       "status":  "confirmed",
+                       "note":  ""
+                   },
+                   {
+                       "date":  "2026-11-20",
                        "start":  "10:00",
                        "end":  "11:40",
                        "title":  "高等数学A（一）",
@@ -279,18 +499,7 @@
                        "note":  ""
                    },
                    {
-                       "date":  "2026-10-16",
-                       "start":  "14:00",
-                       "end":  "15:40",
-                       "title":  "电路分析基础",
-                       "location":  "宝实A408 计算机实验室六",
-                       "kind":  "class",
-                       "reminder_minutes":  30,
-                       "status":  "confirmed",
-                       "note":  "第7周"
-                   },
-                   {
-                       "date":  "2026-10-16",
+                       "date":  "2026-11-20",
                        "start":  "15:55",
                        "end":  "17:35",
                        "title":  "思想道德与法治",
@@ -298,10 +507,10 @@
                        "kind":  "class",
                        "reminder_minutes":  30,
                        "status":  "confirmed",
-                       "note":  "第7周"
+                       "note":  ""
                    },
                    {
-                       "date":  "2026-10-19",
+                       "date":  "2026-11-23",
                        "start":  "10:00",
                        "end":  "11:40",
                        "title":  "大学体育（一）",
@@ -312,7 +521,7 @@
                        "note":  ""
                    },
                    {
-                       "date":  "2026-10-19",
+                       "date":  "2026-11-23",
                        "start":  "14:00",
                        "end":  "15:40",
                        "title":  "高等数学A（一）",
@@ -323,7 +532,7 @@
                        "note":  ""
                    },
                    {
-                       "date":  "2026-10-19",
+                       "date":  "2026-11-23",
                        "start":  "15:55",
                        "end":  "17:35",
                        "title":  "军事理论",
@@ -334,7 +543,7 @@
                        "note":  ""
                    },
                    {
-                       "date":  "2026-10-19",
+                       "date":  "2026-11-23",
                        "start":  "19:30",
                        "end":  "21:05",
                        "title":  "晚自习",
@@ -345,7 +554,7 @@
                        "note":  ""
                    },
                    {
-                       "date":  "2026-10-20",
+                       "date":  "2026-11-24",
                        "start":  "08:00",
                        "end":  "09:40",
                        "title":  "大学英语（一）",
@@ -356,7 +565,7 @@
                        "note":  ""
                    },
                    {
-                       "date":  "2026-10-20",
+                       "date":  "2026-11-24",
                        "start":  "10:00",
                        "end":  "11:40",
                        "title":  "电路分析基础",
@@ -367,18 +576,29 @@
                        "note":  ""
                    },
                    {
-                       "date":  "2026-10-20",
+                       "date":  "2026-11-24",
                        "start":  "14:00",
                        "end":  "15:40",
                        "title":  "思想道德与法治",
-                       "location":  "宝教三204",
+                       "location":  "宝教三607",
                        "kind":  "class",
                        "reminder_minutes":  30,
                        "status":  "confirmed",
                        "note":  ""
                    },
                    {
-                       "date":  "2026-10-20",
+                       "date":  "2026-11-24",
+                       "start":  "15:55",
+                       "end":  "17:35",
+                       "title":  "人工智能通识与应用",
+                       "location":  "宝实A407 计算机实验室五",
+                       "kind":  "class",
+                       "reminder_minutes":  30,
+                       "status":  "confirmed",
+                       "note":  ""
+                   },
+                   {
+                       "date":  "2026-11-24",
                        "start":  "19:30",
                        "end":  "21:05",
                        "title":  "晚自习",
@@ -389,7 +609,7 @@
                        "note":  ""
                    },
                    {
-                       "date":  "2026-10-21",
+                       "date":  "2026-11-25",
                        "start":  "08:00",
                        "end":  "09:40",
                        "title":  "高等数学A（一）",
@@ -400,7 +620,7 @@
                        "note":  ""
                    },
                    {
-                       "date":  "2026-10-21",
+                       "date":  "2026-11-25",
                        "start":  "10:00",
                        "end":  "11:40",
                        "title":  "人工智能通识与应用",
@@ -411,7 +631,7 @@
                        "note":  ""
                    },
                    {
-                       "date":  "2026-10-21",
+                       "date":  "2026-11-25",
                        "start":  "19:30",
                        "end":  "21:05",
                        "title":  "晚自习",
@@ -422,7 +642,7 @@
                        "note":  ""
                    },
                    {
-                       "date":  "2026-10-22",
+                       "date":  "2026-11-26",
                        "start":  "08:00",
                        "end":  "09:40",
                        "title":  "大学英语（一）",
@@ -433,7 +653,18 @@
                        "note":  ""
                    },
                    {
-                       "date":  "2026-10-22",
+                       "date":  "2026-11-26",
+                       "start":  "10:00",
+                       "end":  "11:40",
+                       "title":  "形势与政策B",
+                       "location":  "宝教三202",
+                       "kind":  "class",
+                       "reminder_minutes":  30,
+                       "status":  "confirmed",
+                       "note":  ""
+                   },
+                   {
+                       "date":  "2026-11-26",
                        "start":  "14:00",
                        "end":  "15:40",
                        "title":  "专业导论与学涯规划指导",
@@ -441,10 +672,10 @@
                        "kind":  "class",
                        "reminder_minutes":  30,
                        "status":  "confirmed",
-                       "note":  "第8周"
+                       "note":  ""
                    },
                    {
-                       "date":  "2026-10-22",
+                       "date":  "2026-11-26",
                        "start":  "15:55",
                        "end":  "17:35",
                        "title":  "计算机应用技术",
@@ -455,7 +686,7 @@
                        "note":  ""
                    },
                    {
-                       "date":  "2026-10-22",
+                       "date":  "2026-11-26",
                        "start":  "19:30",
                        "end":  "21:05",
                        "title":  "晚自习",
@@ -466,194 +697,7 @@
                        "note":  ""
                    },
                    {
-                       "date":  "2026-10-23",
-                       "start":  "10:00",
-                       "end":  "11:40",
-                       "title":  "高等数学A（一）",
-                       "location":  "宝教一306",
-                       "kind":  "class",
-                       "reminder_minutes":  30,
-                       "status":  "confirmed",
-                       "note":  ""
-                   },
-                   {
-                       "date":  "2026-10-23",
-                       "start":  "15:55",
-                       "end":  "17:35",
-                       "title":  "计算机应用技术",
-                       "location":  "宝实A508 数字媒体专业实验室",
-                       "kind":  "class",
-                       "reminder_minutes":  30,
-                       "status":  "confirmed",
-                       "note":  "第8周"
-                   },
-                   {
-                       "date":  "2026-10-26",
-                       "start":  "10:00",
-                       "end":  "11:40",
-                       "title":  "大学体育（一）",
-                       "location":  "宝盖300米篮球场5",
-                       "kind":  "class",
-                       "reminder_minutes":  30,
-                       "status":  "confirmed",
-                       "note":  ""
-                   },
-                   {
-                       "date":  "2026-10-26",
-                       "start":  "14:00",
-                       "end":  "15:40",
-                       "title":  "高等数学A（一）",
-                       "location":  "宝教三501",
-                       "kind":  "class",
-                       "reminder_minutes":  30,
-                       "status":  "confirmed",
-                       "note":  ""
-                   },
-                   {
-                       "date":  "2026-10-26",
-                       "start":  "15:55",
-                       "end":  "17:35",
-                       "title":  "军事理论",
-                       "location":  "宝教二408",
-                       "kind":  "class",
-                       "reminder_minutes":  30,
-                       "status":  "confirmed",
-                       "note":  ""
-                   },
-                   {
-                       "date":  "2026-10-26",
-                       "start":  "19:30",
-                       "end":  "21:05",
-                       "title":  "晚自习",
-                       "location":  "地点待班级通知",
-                       "kind":  "study",
-                       "reminder_minutes":  15,
-                       "status":  "confirmed",
-                       "note":  ""
-                   },
-                   {
-                       "date":  "2026-10-27",
-                       "start":  "08:00",
-                       "end":  "09:40",
-                       "title":  "大学英语（一）",
-                       "location":  "宝教一106",
-                       "kind":  "class",
-                       "reminder_minutes":  30,
-                       "status":  "confirmed",
-                       "note":  ""
-                   },
-                   {
-                       "date":  "2026-10-27",
-                       "start":  "10:00",
-                       "end":  "11:40",
-                       "title":  "电路分析基础",
-                       "location":  "宝教三503",
-                       "kind":  "class",
-                       "reminder_minutes":  30,
-                       "status":  "confirmed",
-                       "note":  ""
-                   },
-                   {
-                       "date":  "2026-10-27",
-                       "start":  "14:00",
-                       "end":  "15:40",
-                       "title":  "思想道德与法治",
-                       "location":  "宝教三204",
-                       "kind":  "class",
-                       "reminder_minutes":  30,
-                       "status":  "confirmed",
-                       "note":  ""
-                   },
-                   {
-                       "date":  "2026-10-27",
-                       "start":  "19:30",
-                       "end":  "21:05",
-                       "title":  "晚自习",
-                       "location":  "地点待班级通知",
-                       "kind":  "study",
-                       "reminder_minutes":  15,
-                       "status":  "confirmed",
-                       "note":  ""
-                   },
-                   {
-                       "date":  "2026-10-28",
-                       "start":  "08:00",
-                       "end":  "09:40",
-                       "title":  "高等数学A（一）",
-                       "location":  "宝教三501",
-                       "kind":  "class",
-                       "reminder_minutes":  30,
-                       "status":  "confirmed",
-                       "note":  ""
-                   },
-                   {
-                       "date":  "2026-10-28",
-                       "start":  "10:00",
-                       "end":  "11:40",
-                       "title":  "人工智能通识与应用",
-                       "location":  "宝教一406",
-                       "kind":  "class",
-                       "reminder_minutes":  30,
-                       "status":  "confirmed",
-                       "note":  ""
-                   },
-                   {
-                       "date":  "2026-10-28",
-                       "start":  "19:30",
-                       "end":  "21:05",
-                       "title":  "晚自习",
-                       "location":  "地点待班级通知",
-                       "kind":  "study",
-                       "reminder_minutes":  15,
-                       "status":  "confirmed",
-                       "note":  ""
-                   },
-                   {
-                       "date":  "2026-10-29",
-                       "start":  "08:00",
-                       "end":  "09:40",
-                       "title":  "大学英语（一）",
-                       "location":  "宝教一106",
-                       "kind":  "class",
-                       "reminder_minutes":  30,
-                       "status":  "confirmed",
-                       "note":  ""
-                   },
-                   {
-                       "date":  "2026-10-29",
-                       "start":  "14:00",
-                       "end":  "15:40",
-                       "title":  "专业导论与学涯规划指导",
-                       "location":  "宝教三503",
-                       "kind":  "class",
-                       "reminder_minutes":  30,
-                       "status":  "confirmed",
-                       "note":  "第9周"
-                   },
-                   {
-                       "date":  "2026-10-29",
-                       "start":  "15:55",
-                       "end":  "17:35",
-                       "title":  "计算机应用技术",
-                       "location":  "宝实A407 计算机实验室五",
-                       "kind":  "class",
-                       "reminder_minutes":  30,
-                       "status":  "confirmed",
-                       "note":  "第9周"
-                   },
-                   {
-                       "date":  "2026-10-29",
-                       "start":  "19:30",
-                       "end":  "21:05",
-                       "title":  "晚自习",
-                       "location":  "地点待班级通知",
-                       "kind":  "study",
-                       "reminder_minutes":  15,
-                       "status":  "confirmed",
-                       "note":  ""
-                   },
-                   {
-                       "date":  "2026-10-30",
+                       "date":  "2026-11-27",
                        "start":  "08:00",
                        "end":  "09:40",
                        "title":  "大学英语（一）",
@@ -661,10 +705,10 @@
                        "kind":  "class",
                        "reminder_minutes":  30,
                        "status":  "confirmed",
-                       "note":  "第9周单周"
+                       "note":  ""
                    },
                    {
-                       "date":  "2026-10-30",
+                       "date":  "2026-11-27",
                        "start":  "10:00",
                        "end":  "11:40",
                        "title":  "高等数学A（一）",
@@ -675,15 +719,59 @@
                        "note":  ""
                    },
                    {
-                       "date":  "2026-10-30",
+                       "date":  "2026-11-27",
                        "start":  "15:55",
                        "end":  "17:35",
-                       "title":  "计算机应用技术",
-                       "location":  "宝实A508 数字媒体专业实验室",
+                       "title":  "思想道德与法治",
+                       "location":  "宝教三205",
                        "kind":  "class",
                        "reminder_minutes":  30,
                        "status":  "confirmed",
-                       "note":  "第9周"
+                       "note":  ""
+                   },
+                   {
+                       "date":  "2026-11-30",
+                       "start":  "10:00",
+                       "end":  "11:40",
+                       "title":  "大学体育（一）",
+                       "location":  "宝盖300米篮球场5",
+                       "kind":  "class",
+                       "reminder_minutes":  30,
+                       "status":  "confirmed",
+                       "note":  ""
+                   },
+                   {
+                       "date":  "2026-11-30",
+                       "start":  "14:00",
+                       "end":  "15:40",
+                       "title":  "高等数学A（一）",
+                       "location":  "宝教三501",
+                       "kind":  "class",
+                       "reminder_minutes":  30,
+                       "status":  "confirmed",
+                       "note":  ""
+                   },
+                   {
+                       "date":  "2026-11-30",
+                       "start":  "15:55",
+                       "end":  "17:35",
+                       "title":  "军事理论",
+                       "location":  "宝教二408",
+                       "kind":  "class",
+                       "reminder_minutes":  30,
+                       "status":  "confirmed",
+                       "note":  ""
+                   },
+                   {
+                       "date":  "2026-11-30",
+                       "start":  "19:30",
+                       "end":  "21:05",
+                       "title":  "晚自习",
+                       "location":  "地点待班级通知",
+                       "kind":  "study",
+                       "reminder_minutes":  15,
+                       "status":  "confirmed",
+                       "note":  ""
                    }
                ]
 }
